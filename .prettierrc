@@ -1,0 +1,18 @@
+{
+	"singleQuote": false,
+	"jsxSingleQuote": true,
+	"arrowParens": "avoid",
+	"tabWidth": 4,
+	"useTabs": true,
+	"trailingComma": "all",
+	"bracketSpacing": false,
+	"endOfLine": "lf",
+	"overrides": [
+		{
+			"files": "src/**/*.html",
+			"options": {
+				"printWidth": 140
+			}
+		}
+	]
+}
