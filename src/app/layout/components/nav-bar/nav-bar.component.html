@@ -1,0 +1,10 @@
+<ul>
+	<li><a routerLink="/">Home</a></li>
+	@if(isAuthenticated()){
+		<li><button (click)="logoutClick()">Logout</button></li>
+	}
+	@else {
+		<li><a routerLink="/register">Register</a></li>
+		<li><a routerLink="/login">Login</a></li>
+	}
+</ul>
