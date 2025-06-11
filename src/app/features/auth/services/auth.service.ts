@@ -51,14 +51,14 @@ export class AuthService {
 		}
 	}
 
-	register(value: Partial<{email: null; password: null}>) {
-		return this._httpClient.post<any>(
+	register(value: {email: string, password: string}) {
+		return this._httpClient.post<UserModel>(
 			`${this._apiUrl}/${API_CONSTANTS.AUTH.REGISTER}`,
 			value,
 		);
 	}
 
-	login(value: Partial<{email: null; password: null}>) {
+	login(value: {email: string, password: string}) {
 		return this._httpClient
 			.post<{
 				accessToken: string;
