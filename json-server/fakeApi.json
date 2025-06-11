@@ -17,11 +17,11 @@
   "books": [
     {
       "id": 1,
-      "isbn": "978-0-123456-47-2",
       "title": "Introduction to Spring Boot",
+      "isbn": "978-0-123456-47-2",
       "author": "John Doe",
       "description": "A comprehensive guide to building microservices with Spring Boot.",
-      "releaseDate": "2020-05-15"
+      "releaseDate": "2025-06-04T00:00:00.000Z"
     },
     {
       "id": 2,
@@ -94,46 +94,6 @@
       "author": "Chris Richardson",
       "description": "A guide to building reliable, scalable microservice applications.",
       "releaseDate": "2018-09-01"
-    },
-    {
-      "isbn": "qwertyuiopasd",
-      "title": "qwertyuiopasd",
-      "author": "qwertyuiopasd",
-      "description": "qwertyuiopasd",
-      "releaseDate": "2025-03-21",
-      "id": 11
-    },
-    {
-      "isbn": "qwertyuiopad2",
-      "title": "qwertyuiopasd2",
-      "author": "qwertyuiopasd2",
-      "description": "qwertyuiopasd",
-      "releaseDate": "2025-03-19",
-      "id": 12
-    },
-    {
-      "isbn": "qwertyuiopas4",
-      "title": "qwertyuiopas4",
-      "author": "qwertyuiopas4",
-      "description": "qwertyuiopas4",
-      "releaseDate": "2025-03-13",
-      "id": 13
-    },
-    {
-      "isbn": "qwerty",
-      "title": "qwerty",
-      "author": "qwerty",
-      "description": "qwerty",
-      "releaseDate": "2025-03-14",
-      "id": 14
-    },
-    {
-      "isbn": "qwerty34",
-      "title": "qwerty34",
-      "author": "qwerty34",
-      "description": "qwerty34",
-      "releaseDate": "2025-03-21",
-      "id": 15
     }
   ]
 }

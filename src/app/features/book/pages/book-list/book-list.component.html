@@ -1,0 +1,13 @@
+<h2>Liste des livres</h2>
+@if (isAuthenticated()) {
+	<a [routerLink]="`/${ROUTES_CONSTANTS.BOOK.CREATE}`" class="blue">Create Book</a>
+}
+<ul>
+	@for (book of books; track book.id) {
+		<li>{{ book.title }}
+			@if (isAuthenticated()) {
+				<button (click)="editClick(book.id)">Edit🖍️</button>
+				<button (click)="deleteClick(book.id)">delete❌️</button>
+			}</li>
+	}
+</ul>

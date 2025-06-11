@@ -4,7 +4,8 @@
 		<li><button (click)="logoutClick()">Logout</button></li>
 	}
 	@else {
-		<li><a routerLink="/register">Register</a></li>
-		<li><a routerLink="/login">Login</a></li>
+		<li><a [routerLink]="'/'+ROUTES_CONSTANTS.AUTH.REGISTER">Register</a></li>
+		<li><a [routerLink]="'/'+ROUTES_CONSTANTS.AUTH.LOGIN">Login</a></li>
 	}
+	<li><a [routerLink]="'/'+ROUTES_CONSTANTS.BOOK.BASE">Books</a></li>
 </ul>

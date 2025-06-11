@@ -1,6 +1,7 @@
 import {Component, inject} from "@angular/core";
 import {RouterLink} from "@angular/router";
 import {AuthService} from "../../../features/auth/services/auth.service";
+import {ROUTES_CONSTANTS} from "../../../core/constants/routes.constants";
 
 @Component({
 	selector: "app-nav-bar",
@@ -16,4 +17,6 @@ export class NavBarComponent {
 	logoutClick() {
 		this._authService.logout();
 	}
+
+	protected readonly ROUTES_CONSTANTS = ROUTES_CONSTANTS;
 }
