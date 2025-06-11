@@ -1,4 +1,4 @@
-import {computed, inject, Injectable, PLATFORM_ID, signal} from "@angular/core";
+import {inject, Injectable, PLATFORM_ID, signal} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {API_CONSTANTS} from "../../../core/constants/API.constants";
 import {tap} from "rxjs";
@@ -51,14 +51,14 @@ export class AuthService {
 		}
 	}
 
-	register(value: {email: string, password: string}) {
+	register(value: {email: string; password: string}) {
 		return this._httpClient.post<UserModel>(
 			`${this._apiUrl}/${API_CONSTANTS.AUTH.REGISTER}`,
 			value,
 		);
 	}
 
-	login(value: {email: string, password: string}) {
+	login(value: {email: string; password: string}) {
 		return this._httpClient
 			.post<{
 				accessToken: string;

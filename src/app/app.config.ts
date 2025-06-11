@@ -12,12 +12,13 @@ import {
 	withInterceptors,
 } from "@angular/common/http";
 import {jwtInterceptor} from "./core/interceptors/jwt.interceptor";
+import {errorInterceptor} from "./core/interceptors/error.interceptor";
 
 export const appConfig: ApplicationConfig = {
 	providers: [
 		provideZoneChangeDetection({eventCoalescing: true}),
 		provideRouter(routes),
 		provideClientHydration(withEventReplay()),
-		provideHttpClient(withFetch(), withInterceptors([jwtInterceptor])),
+		provideHttpClient(withFetch(), withInterceptors([jwtInterceptor, errorInterceptor])),
 	],
 };

@@ -15,6 +15,8 @@ export class AuthRegisterComponent {
 	private readonly _authService: AuthService = inject(AuthService);
 	private readonly _router: Router = inject(Router);
 
+	errorMessage: string | null = null;
+
 	registerForm = this._fb.group({
 		email: [null, [Validators.required, Validators.email]],
 		password: [null, [Validators.minLength(8)]],
@@ -26,13 +28,19 @@ export class AuthRegisterComponent {
 			return;
 		}
 
-		this._authService.register(this.registerForm.value).subscribe({
+		const value = {
+			email: this.registerForm.value.email!,
+			password: this.registerForm.value.password!,
+		};
+
+		this._authService.register(value).subscribe({
 			next: (res) => {
 				this._router.navigate(["/", ROUTES_CONSTANTS.AUTH.LOGIN]);
 			},
 			error: (error) => {
 				// ça a échoué!
-				console.log('Error', error);
+				console.warn('Error', error);
+				this.errorMessage = error.error || "An error occurred during registration.";
 			}
 		});
 	}

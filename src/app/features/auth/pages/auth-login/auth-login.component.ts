@@ -24,6 +24,7 @@ export class AuthLoginComponent {
 		email: [null, [Validators.required, Validators.email]],
 		password: [null, [Validators.minLength(8)]],
 	});
+	errorMessage: string | null = null;
 
 	loginSubmit() {
 		if (this.loginForm.invalid) {
@@ -38,6 +39,7 @@ export class AuthLoginComponent {
 			error: error => {
 				// ça a échoué!
 				console.log("Error", error);
+				this.errorMessage = error.error || "An error occurred during login.";
 			},
 		});
 	}

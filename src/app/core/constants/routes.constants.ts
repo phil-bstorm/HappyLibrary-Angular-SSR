@@ -10,6 +10,7 @@ export const ROUTES_CONSTANTS = {
 		EDIT: "books/edit/:id",
 	},
 	ERROR: {
-		NOT_FOUND: "error/404"
+		NOT_FOUND: "error/404",
+		INTERNAL_SERVER_ERROR: "error/500",
 	}
 }

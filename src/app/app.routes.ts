@@ -63,6 +63,13 @@ export const routes: Routes = [
 				"./features/errors/pages/not-found/not-found.component"
 			).then(c => c.NotFoundComponent),
 	},
+	{
+		path: ROUTES_CONSTANTS.ERROR.INTERNAL_SERVER_ERROR,
+		loadComponent: () =>
+			import(
+				"./features/errors/pages/server-error/server-error.component"
+			).then(c => c.ServerErrorComponent),
+	},
 
 	// redirect all other paths to 404
 	{
